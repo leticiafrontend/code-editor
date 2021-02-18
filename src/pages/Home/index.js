@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BoxEditor } from '../../components/BoxEditor';
-import { Editor, File } from './style';
+import { Download, Editor, File } from './style';
 
 export const Home = () => {
   const [html, setHtml] = useState('');
@@ -44,6 +44,7 @@ export const Home = () => {
           height="100%"
         ></iframe>
       </File>
+      <Download>Baixar Arquivos</Download>
     </>
   );
 };
