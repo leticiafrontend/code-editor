@@ -7,4 +7,10 @@ export const Editor = styled.div`
   border-bottom: 6px solid #ff864b;
   display: flex;
   column-gap: 20px;
+  height: 40vh;
+`;
+
+export const File = styled.div`
+  padding: 30px;
+  height: 60vh;
 `;

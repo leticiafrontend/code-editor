@@ -5,7 +5,11 @@ export const BoxEditor = (props) => {
   return (
     <Box>
       <Header>{props.name}</Header>
-      <Body>Olá</Body>
+      <Body
+        value={props.value}
+        onChange={props.onChange}
+        alt={props.name}
+      ></Body>
     </Box>
   );
 };
