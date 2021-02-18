@@ -8,7 +8,7 @@ export default createGlobalStyle`
     font-family: 'Fira Code', monospace;
   }
 
-  input{
+  textarea{
     outline: 0;
   }
 
