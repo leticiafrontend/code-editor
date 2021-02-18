@@ -13,6 +13,8 @@ export const Header = styled.div`
   padding: 10px 20px;
   color: #fff;
   font-weight: 500;
+  display: flex;
+  justify-content: space-between;
   background: linear-gradient(
     90deg,
     #ff884b 3.71%,

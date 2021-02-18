@@ -22,7 +22,7 @@ export const File = styled.div`
   }
 `;
 
-export const Download = styled.button`
+export const Download = styled.a`
   border: none;
   padding: 10px 25px;
   color: #fff;
@@ -31,6 +31,7 @@ export const Download = styled.button`
   border-radius: 13px;
   margin: 0 0 30px 30px;
   transition: opacity 0.3s ease-in;
+  text-decoration: none;
   background: linear-gradient(
     90deg,
     #ff884b 3.71%,

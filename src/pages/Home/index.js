@@ -15,22 +15,36 @@ export const Home = () => {
     </html>
   `;
 
+  const fileHtml = new Blob([html], { type: 'text/plain' });
+  const fileCss = new Blob([css], { type: 'text/plain' });
+  const fileJs = new Blob([js], { type: 'text/plain' });
+
+  const linkHtml = URL.createObjectURL(fileHtml);
+  const linkCss = URL.createObjectURL(fileCss);
+  const linkJs = URL.createObjectURL(fileJs);
+
   return (
     <>
       <Editor>
         <BoxEditor
           name="HTML"
           value={html}
+          link={linkHtml}
+          fileName="index.html"
           onChange={({ target }) => setHtml(target.value)}
         />
         <BoxEditor
           name="CSS"
           value={css}
+          link={linkCss}
+          fileName="style.css"
           onChange={({ target }) => setCss(target.value)}
         />
         <BoxEditor
           name="JavaScript"
           value={js}
+          link={linkJs}
+          fileName="script.js"
           onChange={({ target }) => setJs(target.value)}
         />
       </Editor>
