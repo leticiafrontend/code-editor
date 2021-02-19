@@ -1,6 +1,6 @@
 <br />
 <p align="center">
-  <img src="public/logo.svg" alt="Logo">
+  <img src="public/logo.svg" alt="Logo" width="200px">
   <h3 align="center">Code Editor</h3>
 
   <p align="center">
