@@ -22,14 +22,14 @@ export const File = styled.div`
   }
 `;
 
-export const Download = styled.a`
+export const Download = styled.button`
   border: none;
   padding: 10px 25px;
   color: #fff;
   font-size: 16px;
   font-weight: 500;
   border-radius: 13px;
-  margin: 0 0 30px 30px;
+  margin: 0 0 25px 30px;
   transition: opacity 0.3s ease-in;
   text-decoration: none;
   background: linear-gradient(

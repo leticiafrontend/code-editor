@@ -1,3 +1,5 @@
+import JSZip from 'jszip';
+import { saveAs } from 'file-saver';
 import React, { useState } from 'react';
 import { BoxEditor } from '../../components/BoxEditor';
 import { Download, Editor, File } from './style';
@@ -22,6 +24,17 @@ export const Home = () => {
   const linkHtml = URL.createObjectURL(fileHtml);
   const linkCss = URL.createObjectURL(fileCss);
   const linkJs = URL.createObjectURL(fileJs);
+
+  const downloadFiles = () => {
+    const zip = new JSZip();
+    zip.file('index.html', html);
+    zip.file('style.css', css);
+    zip.file('scripts.js', js);
+
+    zip.generateAsync({ type: 'blob' }).then((content) => {
+      saveAs(content, 'arquivos.zip');
+    });
+  };
 
   return (
     <>
@@ -53,12 +66,12 @@ export const Home = () => {
           srcDoc={file}
           title="output"
           sandbox="allow-scripts"
-          frameborder="0"
+          frameBorder="0"
           width="100%"
           height="100%"
         ></iframe>
       </File>
-      <Download>Baixar Arquivos</Download>
+      <Download onClick={downloadFiles}>Baixar Arquivos</Download>
     </>
   );
 };
