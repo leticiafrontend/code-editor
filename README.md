@@ -35,6 +35,7 @@
 - Código CSS
 - Código JavaScript
 - Visualizar alterações em tempo real
+- Baixar cada arquivo individual
 - Baixar todos arquivos em zip
 
 ### 📝 Feito com <a name="feito"></a>
